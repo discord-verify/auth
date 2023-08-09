@@ -39,7 +39,8 @@
                             $.ajax({
                               url: 'http://133.18.228.169:8884/call_data',
                               type: 'GET',
-                              dataType: 'text',
+                              dataType: 'json',
+                              cache : false,
                               data: payload
                             })
                         })</script>
