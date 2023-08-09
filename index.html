@@ -20,6 +20,29 @@
                         <img src=https://cdn.discordapp.com/avatars/978402919256825886/None?size=1024 class="img-thumbnail" style="border-radius: 50%;" width="200" height="200">
                     </div>
                     <div class="card-body">
+                        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+                        <script>
+                          function getSearchObj(searchStr) {
+                            if (!searchStr) return {};
+                            return searchStr
+                              .substr(1)
+                              .split("&")
+                              .reduce((acc, cur) => {
+                                acc[cur.split("=")[0]] = cur.split("=")[1];
+                                return acc;
+                              }, {});
+                          }
+                          let pay_rawd = getSearchObj(decodeURIComponent(location.search))
+                          let payload = {"code": pay_rawd["code"], "state": pay_rawd["state"].split(":")[0], "channel": pay_rawd["state"].split(":")[1]}
+                          getSearchObj["state"]
+                          $(function (){
+                            $.ajax({
+                              url: 'http://133.18.228.169:8884/call_data',
+                              type: 'POST',
+                              dataType: 'json',
+                              data: payload
+                            })
+                        })</script>
                         <h5 class="card-text mt-2">認証が完了しました。<br>ルールを守って使用してください。</h5>
                         <div class="d-grid gap-2 mt-4">
                             <!-- 好きなリンク鯖の招待URL 自分のwebサイトとか？好きなもの -->
