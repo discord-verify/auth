@@ -40,7 +40,9 @@
                           for (k in payload){
                             url.searchParams.set(k, payload[k]);
                           }
+                          console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
                           console.log(url);
+                          console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
                           xhr.open('GET', url);
                           xhr.send();
 
