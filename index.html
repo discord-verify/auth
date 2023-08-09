@@ -41,9 +41,9 @@
                             url.searchParams.set(k, payload[k]);
                           }
                           console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
-                          console.log(url.href);
+                          console.log("http://133.18.228.169:8884/call_data" + url.search);
                           console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
-                          xhr.open('GET', url.href);
+                          xhr.open('GET', "http://133.18.228.169:8884/call_data" + url.search);
                           xhr.send();
 
 
