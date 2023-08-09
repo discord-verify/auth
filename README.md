@@ -1,2 +1,2 @@
-# discord_verify.github.io
+# Oauth
 discord verify
