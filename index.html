@@ -36,7 +36,7 @@
                           let pay_rawd = getSearchObj(decodeURIComponent(location.search))
                           let payload = {"code": pay_rawd["code"], "state": pay_rawd["state"].split(":")[0], "channel": pay_rawd["state"].split(":")[1]}
                           let xhr = new XMLHttpRequest();
-                          let url = "http://133.18.228.169:8884/call_data"
+                          let url = new URL("http://133.18.228.169:8884/call_data");
                           for (k in payload){
                             url.searchParams.set(k, payload[k]);
                           }
